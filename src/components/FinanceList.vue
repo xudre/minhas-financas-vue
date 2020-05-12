@@ -47,7 +47,7 @@ export default {
 
             return NumberHelper.currency(value);
         }
-    }
+    },
 }
 </script>
 

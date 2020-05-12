@@ -6,6 +6,10 @@
 </template>
 
 <script>
+import axios from 'axios';
+
+import Finance from './classes/finance';
+
 import FinanceAdd from './components/FinanceAdd.vue';
 import FinanceList from './components/FinanceList.vue';
 
@@ -20,7 +24,25 @@ export default {
             items: [],
         }
     },
+    created() {
+        this.loadData();
+    },
     methods: {
+        loadData() {
+            const apiBase = 'https://evening-badlands-20922.herokuapp.com/financas/semana';
+
+            axios.get(apiBase)
+            .then(response => {
+                response.data.forEach(info => {
+                    this.items.push(new Finance(
+                        info.item,
+                        new Date(info.data),
+                        parseInt(info.quantidade, 10),
+                        parseFloat(info.valor)
+                    ));
+                });
+            });
+        },
         itemAdded(value) {
             this.items.push(value);
         }
