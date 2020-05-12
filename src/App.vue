@@ -1,5 +1,7 @@
 <template>
     <div id="app" class="container">
+        <img src="./assets/logo.png" alt="" class="logo mb-4">
+
         <h1 class="mb-4 text-center">Minhas Finanças</h1>
 
         <FinanceAdd v-on:add-item="itemAdded" />
@@ -60,5 +62,10 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
     margin-top: 60px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
 }
 </style>
