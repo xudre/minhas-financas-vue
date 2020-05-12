@@ -1,10 +1,10 @@
 <template>
     <tr>
-        <td>{{ item }}</td>
+        <td class="text-left">{{ item }}</td>
         <td>{{ date | calendar }}</td>
         <td>{{ quantity }}</td>
-        <td>{{ value | currency }}</td>
-        <td>{{ total }}</td>
+        <td class="text-right">{{ value | currency }}</td>
+        <td class="text-right">{{ total }}</td>
     </tr>
 </template>
 

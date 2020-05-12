@@ -1,7 +1,7 @@
 <template>
     <form class="FinanceAdd" @submit.prevent="addItem">
       <div class="form-group">
-        <label for="item">Item</label>
+        <label for="item" >Item</label>
         <input
           type="text"
           id="item"
@@ -50,7 +50,7 @@
           />
         </div>
       </div>
-      <input type="submit" name="Enviar" id="" class="btn btn-primary" />
+      <input type="submit" name="Enviar" class="btn btn-primary" />
     </form>
 </template>
 
@@ -80,12 +80,13 @@ export default {
                 parseFloat(this.valor)
             );
 
-            this.$emit('add-item', item)
+            this.$emit('add-item', item);
 
-            this.item = ""
-            this.data = ""
-            this.quantidade = ""
-            this.valor = ""
+            this.item = "";
+            this.data = "";
+            this.valor = "";
+            this.quantidade = "";
+            this.valor = "";
         }
     }
 }

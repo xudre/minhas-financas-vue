@@ -1,12 +1,12 @@
 <template>
     <table class="table mt-4">
-        <thead>
+        <thead class="thead-dark">
             <tr>
-                <th>Item</th>
+                <th class="text-left">Item</th>
                 <th>Data</th>
                 <th>#</th>
-                <th>$</th>
-                <th>=</th>
+                <th class="text-right">$</th>
+                <th class="text-right">=</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@
         <tfoot>
             <tr>
                 <td colspan="4" class="text-right">Total de compras:</td>
-                <td>{{ total }}</td>
+                <td class="text-right">{{ total }}</td>
             </tr>
         </tfoot>
     </table>

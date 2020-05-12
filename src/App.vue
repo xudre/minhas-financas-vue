@@ -1,6 +1,9 @@
 <template>
     <div id="app" class="container">
+        <h1 class="mb-4 text-center">Minhas Finanças</h1>
+
         <FinanceAdd v-on:add-item="itemAdded" />
+
         <FinanceList :items="items" />
     </div>
 </template>
@@ -55,7 +58,6 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     margin-top: 60px;
 }
